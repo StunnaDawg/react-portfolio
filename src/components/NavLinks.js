@@ -1,6 +1,6 @@
 import React from 'react'; 
 
-export default function Nav({ currentSection, handleSectionChange}) {
+function NavLinks({ currentSection, handleSectionChange}) {
     return (
         <nav className="header-links">
             <ul>
@@ -35,3 +35,5 @@ export default function Nav({ currentSection, handleSectionChange}) {
         </nav>
     )
 }
+
+export default NavLinks

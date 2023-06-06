@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectDiv from "./Project";
 
 export default function Portfolio() {
     return (
@@ -6,30 +7,26 @@ export default function Portfolio() {
             <div className="project-container">
                 <h2>Projects</h2>
                 <div className="projects-main">
-                    <div className="projects-right">
-                        <a href="https://github.com/roseandlily33/englishFootballTracker32">
-                            <div className="flex-item" id="big-item">
-                                <h4>Statistics Tracker</h4>
-                                <p>Live</p>
-                            </div>
-                        </a> 
-                    </div>
-                    <div className="projects-left">
-                        <a href="https://github.com/Valerigionetnoel/Budget-tracker">
-                            <div className="flex-item"> 
-                                <h4>Budget tracker</h4>
-                                <p>Live</p>
-                            </div>
-                        </a>
-                        <a href="https://github.com/StunnaDawg">
-                            <div className="flex-item"> 
-                                <h4>Discord Bot</h4>
-                                <p>Coming soon!</p>
-                            </div>
-                        </a>
-                    </div>
+                    <ProjectDiv
+                    projectName="Statistics Tracker"
+                    link="https://github.com/roseandlily33/englishFootballTracker32"
+                    projectSide="projects-right"
+                    releaseState="Live"
+                    />
+                    <ProjectDiv
+                    projectName="Budget Tracker"
+                    link="https://github.com/Valerigionetnoel/Budget-tracker"
+                    projectSide="projects-left"
+                    releaseState="Live"
+                    />
+                    <ProjectDiv
+                    projectName="Discord Bot"
+                    link="N/A"
+                    projectSide="N/A"
+                    releaseState="Coming Soon"
+                    />
                 </div>
             </div>
-        </section> 
+        </section>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 function EmailSection() {
   let [inputEmailValue, setEmailInputValue] = useState("");
@@ -13,6 +13,8 @@ function EmailSection() {
       console.log(emailStatus);
     }
   };
+
+  
   if (emailStatus === "wrong") {
     return (
       <form>

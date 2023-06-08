@@ -1,65 +1,57 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
+import clickOutside from './utils/clickOutside'
 
 function EmailSection() {
-  let [inputEmailValue, setEmailInputValue] = useState("");
-  let [emailStatus, setEmailStatus] = useState("wrong");
-
-  const regex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
-
-  let handleEmailChange = (event) => {
-    setEmailInputValue(event.target.value);
-    if (regex.test(event.target.value)) {
-      setEmailStatus("good");
-      console.log(emailStatus);
-    }
-  };
-
+    let [inputEmailValue, setEmailInputValue] = useState("");
+    let [emailStatus, setEmailStatus] = useState("");
   
-  if (emailStatus === "wrong") {
+    const regex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+  
+    let handleEmailChange = (event) => {
+      setEmailInputValue(event.target.value);
+      if (regex.test(event.target.value)) {
+        setEmailStatus("good");
+      } else {
+        setEmailStatus("wrong");
+      }
+    };
+  
+    const { ref, isClickedOutside, setIsClickedOutside } = clickOutside(false);
+  
     return (
-      <form>
-        <label>
-          email:
-          <input
-            type="text"
-            value={inputEmailValue}
-            onChange={handleEmailChange}
-          />
-          <p>Not a valid Email!</p>
-        </label>
-      </form>
+      <div ref={ref}>
+        <form>
+          <label>
+            email:
+            <input
+              type="text"
+              value={inputEmailValue}
+              onChange={handleEmailChange}
+            />
+            {(isClickedOutside && emailStatus === "wrong") && <p>Not a valid Email!</p>}
+            {(!isClickedOutside && emailStatus === "good") && <p>Email!</p>}
+            {(!isClickedOutside && emailStatus === "") && <p></p>}
+          </label>
+        </form>
+      </div>
     );
   }
+  
 
-  if (emailStatus === "good") {
-    return (
-      <form>
-        <label>
-          email:
-          <input
-            type="text"
-            value={inputEmailValue}
-            onChange={handleEmailChange}
-          />
-          <p>valid</p>
-        </label>
-      </form>
-    );
-  }
-}
 
 function NameSection() {
   let [inputNameValue, setNameInputValue] = useState("");
-  let [nameStatus, setNameStatus] = useState("empty");
+  let [nameStatus, setNameStatus] = useState("");
 
   let handleNameChange = (event) => {
-    setNameInputValue(event.target.value);
-    setNameStatus("filled");
+    setNameInputValue(event.target.value)
+        setNameStatus("filled");
   };
 
-  if (nameStatus === "empty") {
+  const { ref, isClickedOutside, setIsClickedOutside } = clickOutside(false);
+
     return (
-      <div>
+        <div ref={ref}>
         <h2>Contact Me!</h2>
         <form>
           <label>
@@ -69,42 +61,26 @@ function NameSection() {
               value={inputNameValue}
               onChange={handleNameChange}
             />
-            <p>name please</p>
+            {(!isClickedOutside && nameStatus === "filled") && <p>Hello! </p>}
+            {(isClickedOutside && nameStatus === "") && <p>Who are you?</p>}
           </label>
         </form>
       </div>
     );
   }
-  if (nameStatus === "filled") {
-    return (
-      <div>
-        <h2>Contact Me!</h2>
-        <form>
-          <label>
-            Name:
-            <input
-              type="text"
-              value={inputNameValue}
-              onChange={handleNameChange}
-            />
-            <p>thanks</p>
-          </label>
-        </form>
-      </div>
-    );
-  }
-}
 
 function MessageSection() {
   let [inputMessageValue, setMessageInputValue] = useState("");
-  let [messageState, setMessageState] = useState("noMessage");
+  let [messageState, setMessageState] = useState("");
 
   let handleMessageChange = (event) => {
     setMessageInputValue(event.target.value);
     setMessageState("message");
   };
-  if (messageState === "noMessage") {
+  const { ref, isClickedOutside, setIsClickedOutside } = clickOutside(false);
+
     return (
+        <div ref={ref}>
       <form>
         message:
         <input
@@ -112,26 +88,13 @@ function MessageSection() {
           value={inputMessageValue}
           onChange={handleMessageChange}
         />
-        <p>No message!</p>
+        {(!isClickedOutside && messageState === "message") && <p>Thanks</p>}
+        {(isClickedOutside && messageState === "") && <p>SAY SOMETHING</p>}
         <button onClick={() => console.log("hey")}>Submit</button>
       </form>
+      </div>
     );
   }
-  if (messageState === "message") {
-    return (
-      <form>
-        message:
-        <input
-          type="text"
-          value={inputMessageValue}
-          onChange={handleMessageChange}
-        />
-        <p>Thanks!</p>
-        <button onClick={() => console.log("hey")}>Submit</button>
-      </form>
-    );
-  }
-}
 
 export default function Contact() {
   return (

@@ -3,8 +3,8 @@ import React from 'react';
 function NavLinks({ currentSection, handleSectionChange}) {
     return (
         <nav className="header-links">
-            <ul>
-                <li><a href="#about"
+            <ul className='header'>
+                <li className='header'><a href="#about"
                 onClick={() => handleSectionChange('About')}
                     className={currentSection === 'About' ? 'nav-link active' : 'nav-link'}
                 >
@@ -17,13 +17,13 @@ function NavLinks({ currentSection, handleSectionChange}) {
                     Portfolio
                     </a>
                     </li>
-                {/* <li><a href="#resume"
-                onClick={() => handleSectionChange('About')}
-                className={currentSection === 'About' ? 'nav-link active' : 'nav-link'}
+                 <li><a href="#resume"
+                onClick={() => handleSectionChange('Resume')}
+                className={currentSection === 'Resume' ? 'nav-link active' : 'nav-link'}
                 >
                     Resume
                     </a>
-                    </li> */}
+                    </li> 
                 <li><a href="#contact-form"
                 onClick={() => handleSectionChange('Contact')}
                 className={currentSection === 'Contact' ? 'nav-link active' : 'nav-link'}

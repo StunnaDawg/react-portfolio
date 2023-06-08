@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './Header';
 import Footer from './Footer';
 import NavLinks from './NavLinks';
-import Project from './pages/Project'
+import Resume from './pages/Resume';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
@@ -21,6 +21,10 @@ export default function PortfolioContainer() {
 
         if ( currentSection === 'Portfolio') {
             return <Portfolio/>
+        }
+
+        if ( currentSection === 'Resume') {
+            return <Resume/>
         }
         
             return <About/>

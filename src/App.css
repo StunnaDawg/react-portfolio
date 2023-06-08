@@ -1,6 +1,7 @@
 * {
     color: whitesmoke;
     text-decoration: none;
+    list-style: none;
   }
   
   body {
@@ -17,10 +18,11 @@
     align-items: center;
     justify-content: space-between;
     max-width: 100%;
+    font-size: 30px;
+    list-style: none;
   }
   
   .header ul {
-    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -95,23 +97,6 @@
       max-width: 100%;
   }
   
-  .hero button {
-      display: block;
-      background-color: blueviolet;
-      padding: 30px;
-      border-radius: 10px;
-      width: 8em;
-      padding: 0.5em;
-      font-weight: 600;
-      font-size: 20px;
-    }
-  
-    .hero button:hover {
-      background-color: white;
-      border: solid blueviolet;
-      color: blueviolet;
-      cursor: pointer;
-    }
   
   @media screen and (min-width: 1700px) {
       .column-left h1 {
@@ -154,7 +139,7 @@
           padding: 30px;
       }
       .hero-wrapper {
-          grid-template-columns: 1fr; /* makes it 1 column */
+          grid-template-columns: 1fr;
       }
   
       .column-left {
@@ -294,7 +279,7 @@
   }
   
   .flex-item {
-      background: url('./GitHub-Logos/GitHub_Logo_White.png');
+      background: url('./components/pages/GitHub-Logos/GitHub_Logo_White.png');
       background-repeat: no-repeat;
       background-size: 35%;
       background-color:#171c28;
@@ -373,73 +358,124 @@
   
   /* ---------contact me section--------- */
   
-  .contact-me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+
+.form-section {
+    margin: 1rem 0;
   }
   
-  .contact-me h2 {
+  .form-input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .email-form .form-input, 
+  .name-form .form-input {
+    color: black;
+    width: 50%;
+    border-radius: 10px;
+  }
+
+  input.email-input.unknown {
+    border: 2px solid red;
+    outline: none;
+  }
+  input.name-input.unknown {
+    border: 2px solid red;
+    outline: none;
+  }
+  input.message-input.unknown {
+    border: 2px solid red;
+    outline: none;
+  }
+  
+  .message-form .form-input {
+    color: black;
+    width: 50%;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .emailPlease {
+    color: crimson;
+  }
+
+  .formNames {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .formSubmit {
+        display: block;
+        background-color: blueviolet;
+        padding: 30px;
+        border-radius: 10px;
+        width: 8em;
+        padding: 0.5em;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    
+      .formSubmit:hover {
+        background-color: white;
+        border: solid blueviolet;
+        color: blueviolet;
+        cursor: pointer;
+      }
+      
+  .resumeSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 600px;
+  }
+
+  .profHeader {
     font-size: 60px;
   }
-  
-  .contact-me ul {
-      display: flex;
-      padding-bottom: 50px;
-      font-size: 40px;
-      padding-inline-start: 0%;
-      flex-wrap: wrap;
+
+  .resumeProf {
+    list-style: none;
+    padding-left: 0;
+    font-size: 40px;
   }
   
-  .contact-me ul li {
-      display: flex; 
+  .resumeProf li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
   }
   
-  .contact-me a {
-      margin: 25px;
-      font-weight: bolder;
+  .resumeProf li:last-child {
+    border-bottom: none;
   }
-  
-  a:hover {
-      cursor: pointer;
-      color: blueviolet;
-  
-  }
-  
-  @media screen and (min-width: 1700px) {
-      .contact-me h2 {
-          font-size: 100px;
-      }
-  }
-  
-  @media screen and (max-width: 760px) {
-      .contact-me ul {
-          display: grid;
-          grid-template-columns: 1fr;
-      }
-  }
-  
-  @media screen and (max-width: 460px) {
-      .contact-me h2 {
-          font-size: 40px;
-      }
-      .contact-me ul {
-          font-size: 30px;
-      }
-  }
-      
-  
+
   /* ---------footer section--------- */
   
   .footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center; 
     border-top: solid blueviolet;
+    padding: 1em;
   }
   
-  .footer h5 {
-    font-size: 25px;
-    text-align: center;
+  .footer-header h5 {
+    text-align: left;
+    font-size: large;
+  }
+  
+  .footer-links {
+    display: flex;
+  }
+  
+  .footer-links ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+  
+  .footer-links li a {
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
   }

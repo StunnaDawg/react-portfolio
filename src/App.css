@@ -20,6 +20,7 @@
     max-width: 100%;
     font-size: 30px;
     list-style: none;
+    border-bottom: #ddd;
   }
   
   .header ul {
@@ -43,15 +44,22 @@
       margin-left: 10px;
   }
   
-  @media  screen and (max-width: 473px ) {
-      .header ul {
+  @media  screen and (max-width: 630px ) {
+      .header{
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: 1fr;
-          margin-right: 40px;
+          text-align: center;
       }
   
   }
+
+  @media  screen and (max-width: 630px ) {
+   .header li {
+       padding-bottom: 10px;
+    }
+
+}
   
   /* hero section */
   
@@ -153,106 +161,16 @@
       }
   }
   
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 599px) {
       .hero-wrapper {
           grid-template-areas: 600px;
       }
       .column-left h1 {
-          font-size: 45px;
+          font-size: 60px;
+          text-align: center;
       }
   }
   
-  /* ---------Skills section--------- */
-  
-  .skills {
-    padding: 60px 60px;
-    border-bottom: solid blueviolet;
-  }
-  
-  .skills-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-  }
-  
-  .skills-container h2 {
-      font-size: 80px;
-      margin-bottom: 20px;
-  }
-  
-  .skills-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 200px;
-  }
-  
-  .skills-text {
-      font-size: 25px;
-  }
-  
-   .skills-image {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      padding-bottom: 100px;
-  }
-  
-  .skills-img {
-      max-width: 100%;
-      max-width: 100%;
-  } 
-  
-  .fa-brands {
-      padding: 0%;
-    margin-top: 5px;
-    margin-right: 25px;
-    margin-bottom: 10px;
-  }
-  
-  .fa-brands:hover {
-      color: blueviolet;
-      cursor: pointer;
-  }
-  
-  @media screen and (min-width: 1700px) {
-      .skills-container h2 {
-          font-size: 120px;
-      }
-      
-      .skills-text p {
-          font-size: 40px;
-      }
-  }
-  
-  @media screen and (min-width: 1000px) {
-      .skills-text p {
-      font-size: 30px;
-      }
-  }
-  
-  @media screen and (max-width: 760px){
-      .skills-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      }
-  }
-  
-  @media screen and (max-width: 860px) {
-      .skills {
-          padding: 30px;
-      }
-      .skills-content {
-          grid-template-columns: 1fr;
-          grid-template-rows: 1fr;
-      }
-  }
-  
-  @media screen and (max-width: 460px) {
-      .skills-container h2 {
-          font-size: 45px;
-      }
-  }
   
   /* ---------projects-section--------- */
   
@@ -362,7 +280,7 @@
 .form-section {
     margin: 1rem 0;
   }
-  
+
   .form-input {
     display: block;
     width: 100%;
@@ -423,6 +341,13 @@
         color: blueviolet;
         cursor: pointer;
       }
+
+      .resumeButton:hover {
+        border: solid blueviolet;
+        color: blueviolet;
+        cursor: pointer;
+      }
+
       
   .resumeSection {
     display: grid;

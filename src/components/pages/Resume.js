@@ -5,7 +5,7 @@ export default function Resume() {
     <section className="hero" id="about-me">
             <div className="hero-wrapper">
                 <div className="column-left">
-                    <h1><a href="https://docs.google.com/document/d/1uSlaK6wRvMOeCHAQ-eRxklVp1jCxTG0yqkgmyKLzATA/edit?usp=sharing">Click me to Download my Resume!</a></h1>
+                    <h1 ><a className="resumeButton"href="https://docs.google.com/document/d/1uSlaK6wRvMOeCHAQ-eRxklVp1jCxTG0yqkgmyKLzATA/edit?usp=sharing">Click me to Download my Resume!</a></h1>
                 </div>
                 <div className="column-right">
                     <h2 className="profHeader">Proficiencies </h2>

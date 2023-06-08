@@ -1,11 +1,11 @@
 import React from "react";
 
 export default function ProjectDiv ({
+/* props to show multiple projects */
     projectName,
     link,
     projectSide,
     releaseState
-
     }) {
     return (
         <div className={projectSide}>

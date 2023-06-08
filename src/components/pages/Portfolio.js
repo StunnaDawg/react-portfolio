@@ -7,6 +7,7 @@ export default function Portfolio() {
             <div className="project-container">
                 <h2>Projects</h2>
                 <div className="projects-main">
+                    {/* insert props and desired values to display*/}
                     <ProjectDiv
                     projectName="Statistics Tracker"
                     link="https://github.com/roseandlily33/englishFootballTracker32"
@@ -24,6 +25,24 @@ export default function Portfolio() {
                     link="N/A"
                     projectSide="N/A"
                     releaseState="Coming Soon"
+                    />
+                    <ProjectDiv
+                    projectName="Chalk Line Renos"
+                    link="N/A"
+                    projectSide="N/A"
+                    releaseState="Coming Soon"
+                    />
+                    <ProjectDiv
+                    projectName="Chat App"
+                    link="N/A"
+                    projectSide="N/A"
+                    releaseState="Coming Soon"
+                    />
+                    <ProjectDiv
+                    projectName="Pokemon Social Network"
+                    link="https://github.com/StunnaDawg/Pokemon-Social-Network"
+                    projectSide="N/A"
+                    releaseState="Live"
                     />
                 </div>
             </div>

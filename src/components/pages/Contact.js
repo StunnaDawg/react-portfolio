@@ -103,7 +103,7 @@ function formSubmitHandler () {
 
 export default function Contact() {
   return (
-    <div>
+    <div className="theWholeForm">
       <div>
         <NameSection />
       </div>

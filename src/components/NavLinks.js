@@ -4,7 +4,7 @@ function NavLinks({ currentSection, handleSectionChange}) {
     return (
         <nav className="header-links">
             <ul className='header'>
-                <li className='header'><a href="#about"
+                <li><a href="#about"
                 onClick={() => handleSectionChange('About')}
                     className={currentSection === 'About' ? 'nav-link active' : 'nav-link'}
                 >

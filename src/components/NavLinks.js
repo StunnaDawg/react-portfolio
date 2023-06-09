@@ -1,5 +1,5 @@
 import React from 'react'; 
-
+// this section helps handle the section changes
 function NavLinks({ currentSection, handleSectionChange}) {
     return (
         <nav className="header-links">

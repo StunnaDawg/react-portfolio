@@ -21,8 +21,8 @@ export default function Portfolio() {
                     releaseState="Live"
                     />
                     <ProjectDiv
-                    projectName="Discord Bot"
-                    link="N/A"
+                    projectName="FitBuild"
+                    link="https://fit-build-03ae366fc163.herokuapp.com/"
                     projectSide="N/A"
                     releaseState="Coming Soon"
                     />

@@ -5,14 +5,16 @@ export default function ProjectDiv ({
     projectName,
     link,
     projectSide,
-    releaseState
+    releaseState, 
+    background, 
+    backgroundOption, 
+    postion
     }) {
     return (
-        <div className={projectSide}>
+        <div className={projectSide} >
             <a href={link}>
-                <div className="flex-item" id="big-item">
-                    <h4>{projectName}</h4>
-                    <p>{releaseState}</p>
+                <div className="flex-item" id="big-item"  style={{backgroundImage: `url(${background})`,  backgroundSize: backgroundOption, backgroundPosition: postion}}>
+                    <h4 style={{color: "white", }}>{projectName}</h4>
                 </div>
             </a> 
         </div> 

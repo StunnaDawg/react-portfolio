@@ -197,7 +197,6 @@
   }
   
   .flex-item {
-      background: url('./components/pages/GitHub-Logos/GitHub_Logo_White.png');
       background-repeat: no-repeat;
       background-size: 35%;
       background-color:#171c28;
@@ -209,6 +208,9 @@
       border-radius: 10px;
   }
   
+  #fitbuild {
+    background: url('./components/pages/GitHub-Logos/GitHub_Logo_White.png');
+  }
   
   .flex-item h4 {
       display: flex;

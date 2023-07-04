@@ -12,7 +12,7 @@ export default function Footer() {
             <a href="https://github.com/StunnaDawg"> Github</a>
           </li>
           <li>
-            <a href="www.linkedin.com/in/jonson-allen-56a29227a"> LinkedIn </a>
+            <a href="https://www.linkedin.com/in/jonson-allen-56a29227a"> LinkedIn </a>
           </li>
         </ul>
       </div>

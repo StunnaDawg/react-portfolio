@@ -24,13 +24,13 @@ function NavLinks({ currentSection, handleSectionChange}) {
                     Resume
                     </a>
                     </li> 
-                <li><a href="#contact-form"
+                {/* <li><a href="#contact-form"
                 onClick={() => handleSectionChange('Contact')}
                 className={currentSection === 'Contact' ? 'nav-link active' : 'nav-link'}
                 >
                     Contact Me
                 </a>
-                </li>
+                </li> */}
             </ul>
         </nav>
     )

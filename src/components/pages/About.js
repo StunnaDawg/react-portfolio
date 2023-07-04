@@ -7,8 +7,9 @@ export default function About() {
                 <div className="column-left">
                     <h1>Hi I'm Jonson</h1>
                     <p>
-                    I am a Full-Stack Web Development student at UNB.<br/>
-                    I have a passion for problem solving and design. <br/>
+                    I am a Full-Stack Web Development Graduate from the University of New Brunswick.
+                    I bring passion and expertise in crafting robust, user-friendly digital experiences. 
+                    I am proficient in Javascript, React, NodeJs, ExpressJS, MongoDB, and mySQL!  
                     </p>
                 </div>
 

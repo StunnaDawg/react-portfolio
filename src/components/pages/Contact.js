@@ -103,7 +103,7 @@ function formSubmitHandler () {
 
 export default function Contact() {
   return (
-    <div className="theWholeForm">
+    <div className="theWholeForm" style={{borderTop: "solid blueviolet"}}>
       <div>
         <NameSection />
       </div>

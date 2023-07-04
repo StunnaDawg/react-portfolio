@@ -176,6 +176,7 @@
   
   .projects {
       padding: 60px 60px;
+      border-top: solid blueviolet;
       border-bottom: solid blueviolet;
   }
   
